@@ -1,12 +1,29 @@
-function loadPDF(pdfFile) {
+function loadModule(pdfFile) {
+    const contentList = document.getElementById('content-list');
     const pdfViewer = document.getElementById('pdf-viewer');
-    // Clear previous content
+    const backArrow = document.getElementById('back-arrow');
+
+    // Hide the module list and show the PDF viewer and back arrow
+    contentList.style.display = 'none';
+    pdfViewer.style.display = 'block';
+    backArrow.style.display = 'block';
+
+    // Load the PDF into the viewer
     pdfViewer.innerHTML = '';
-    // Create a new iframe for the PDF
     const iframe = document.createElement('iframe');
     iframe.src = pdfFile;
     iframe.width = '100%';
     iframe.height = '100%';
-    // Append the iframe to the PDF viewer
     pdfViewer.appendChild(iframe);
+}
+
+function showModules() {
+    const contentList = document.getElementById('content-list');
+    const pdfViewer = document.getElementById('pdf-viewer');
+    const backArrow = document.getElementById('back-arrow');
+
+    // Show the module list and hide the PDF viewer and back arrow
+    contentList.style.display = 'block';
+    pdfViewer.style.display = 'none';
+    backArrow.style.display = 'none';
 }
