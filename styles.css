@@ -1,0 +1,102 @@
+:root {
+    --primary-color: #00ff9d;
+    --background-dark: #0a1929;
+    --background-medium: #12263a;
+    --text-primary: #e0e0e0;
+    --accent-color: #7c4dff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    background-color: var(--background-dark);
+    color: var(--text-primary);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Left Panel for Modules */
+.left-panel {
+    width: 50%; /* Fixed to half of the screen */
+    background-color: var(--background-medium);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Add vertical scrollbar */
+}
+
+.panel-header {
+    padding: 1rem;
+    background-color: var(--background-dark);
+    border-bottom: 2px solid var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.content-list {
+    padding: 1rem;
+}
+
+.content-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content-list li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.content-list li:hover {
+    background-color: var(--accent-color);
+    color: var(--text-primary);
+}
+
+/* PDF Viewer */
+.pdf-viewer {
+    flex-grow: 1;
+    padding: 1rem;
+    min-height: 400px; /* Increase the height of the PDF viewer */
+}
+
+.pdf-viewer iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Right Panel for RDP */
+.right-panel {
+    width: 50%; /* Fixed to half of the screen */
+    background: var(--background-dark);
+}
+
+.rdp-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}

@@ -1,0 +1,29 @@
+{
+  "categories": [
+    {
+      "title": "Network Tools",
+      "items": [
+        {
+          "title": "WiFi Hacking",
+          "icon": "fas fa-wifi",
+          "content": "Content for WiFi hacking..."
+        },
+        {
+          "title": "File Transfer",
+          "icon": "fas fa-file-export",
+          "content": "File transfer methods..."
+        }
+      ]
+    },
+    {
+      "title": "System Commands",
+      "items": [
+        {
+          "title": "Basic Commands",
+          "icon": "fas fa-terminal",
+          "content": "ls, cd, mkdir..."
+        }
+      ]
+    }
+  ]
+}

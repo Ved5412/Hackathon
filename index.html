@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUPP and Basic Modules with RDP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <!-- Left Panel for Modules -->
+    <div class="left-panel" id="left-panel">
+        <div class="panel-header">
+            <h2>Modules</h2>
+        </div>
+        <div class="content-list" id="content-list">
+            <ul>
+                <li onclick="loadPDF('cupp-guide.pdf')">CUPP Guide</li>
+                <li onclick="loadPDF('basic-guide.pdf')">Basic Guide</li>
+            </ul>
+        </div>
+        <div class="pdf-viewer" id="pdf-viewer">
+            <!-- PDF will be loaded here -->
+        </div>
+    </div>
+
+    <!-- Right Panel for RDP -->
+    <div class="right-panel" id="right-panel">
+        <iframe src="https://vnc.tryhackme.tech/index.html?host=proxy-7.tryhackme.tech&password=d60364910f6ba4ac&proxyIP=10.10.245.68&resize=remote" class="rdp-frame" id="rdp-frame"></iframe>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
